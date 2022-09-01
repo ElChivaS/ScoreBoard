@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Basketball Score :: Scrimba</title>
+</head>
+<body>
+    <div class="container">
+        <div id="board-home">
+            <h3 class="board-title">HOME</h3>
+            <span id="score-home" class="border">0</span>
+            <div id="button-row">
+                <button class="btn btn-border" onclick="addOneHome()"> +1 </button>
+                <button class="btn btn-border" onclick="addTwoHome()"> +2 </button>
+                <button class="btn btn-border" onclick="addThreeHome()"> +3 </button>
+            </div>
+        </div>
+        
+        <div class="board-controls">
+            <button class="btn btn-border" onclick="resetScore()"> New Game </button>
+            <div id="timer" class="clock">
+                00:00:00
+            </div>
+        </div>
+
+        <div id="board-guest">
+            <h3 class="board-title">GUEST</h3>
+            <span id="score-guest" class="border">0</span>
+            <div id="button-row">
+                <button class="btn btn-border" onclick="addOneGuest()"> +1 </button>
+                <button class="btn btn-border" onclick="addTwoGuest()"> +2 </button>
+                <button class="btn btn-border" onclick="addThreeGuest()"> +3 </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

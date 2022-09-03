@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONTS & STYLES-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Karla&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <h1>Generate a <br><span>random password</span></h1>
+            <p>Never use an insecure password again.</p>
+            <button class="btn btn-base" onclick="getRandomString()">Generate passwords</button>
+            <hr>
+            <div class="results-item">
+                <input type="text" id="password-1-el" disabled />
+                <input type="text" id="password-2-el" disabled />
+            </div>
+        </div>
+    </div>
+
+    <script src="js/password.js"></script>
+</body>
+</html>

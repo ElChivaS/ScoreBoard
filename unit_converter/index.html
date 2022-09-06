@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Metric / Imperial System Unit Converter v1.0 Author: Hermann Caraballo -->
+<!-- September 2022 || git: @elChivas -->
+<!-- ToDos: Finish CSS - Implement Dark Theme - Simplify converter function - Make ONE div only for results - Iterize results -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS & STYLESHEET -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Unit Converter :: Scrimba</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Metric / Imperial Unit Converter</h1>
+            <label for="user-unit">Place the amount you want to convert:</label>
+            <input type="text" id="user-unit" placeholder="923">
+            <button class="btn btn-convert" id="convert-btn">Convert</button>
+        </header>
+        <section>
+            <div class="item-card" id="length">
+                <h3>Length (Meter / Feet)</h3>
+                <p id="result-length"></p>
+            </div>
+            <div class="item-card" id="volume">
+                <h3>Volume (Meter / Feet)</h3>
+                <p id="result-volume"></p>
+            </div>
+            <div class="item-card" id="mass">
+                <h3>Mass (Meter / Feet)</h3>
+                <p id="result-mass"></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/converter.js"></script>
+</body>
+</html>

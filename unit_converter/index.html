@@ -9,33 +9,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FONTS & STYLESHEET -->
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP 4.6 CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Unit Converter :: Scrimba</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Converter</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+                    <button class="btn nav-link no-border" id="theme-btn">Dark Theme</button>
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link" href="#">Link</a> -->
+                </li>
+                <li class="nav-item">
+                    <!-- <a class="nav-link disabled">Disabled</a> -->
+                </li>
+            </ul>
+            <!-- <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+            <div class="logo">
+                <!-- <img src="assets/img/Hc-logo-1200x300.png" width="250" alt="[HcDevLabs]logo"> -->
+                <h2 class="logo-light" id="logo-txt">[HcDevLabs]</h2>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <header>
-            <h1>Metric / Imperial Unit Converter</h1>
+            <h1 class="mt-7">Metric / Imperial Unit Converter</h1>
             <label for="user-unit">Place the amount you want to convert:</label>
             <input type="text" id="user-unit" placeholder="923">
             <button class="btn btn-convert" id="convert-btn">Convert</button>
         </header>
-        <section>
-            <div class="item-card" id="length">
-                <h3>Length (Meter / Feet)</h3>
-                <p id="result-length"></p>
+        <section id="sect-cont" class="light-bg">
+            <div class="item-card" id="item-length">
+                <h3 id="h3-length" class="light-txt">Length (Meter / Feet)</h3>
+                <p class="light-p" id="result-length"></p>
             </div>
-            <div class="item-card" id="volume">
-                <h3>Volume (Meter / Feet)</h3>
-                <p id="result-volume"></p>
+            <div class="item-card" id="item-volume">
+                <h3 id="h3-volume" class="light-txt">Volume (Liter / Gallon)</h3>
+                <p class="light-p" id="result-volume"></p>
             </div>
-            <div class="item-card" id="mass">
-                <h3>Mass (Meter / Feet)</h3>
-                <p id="result-mass"></p>
+            <div class="item-card" id="item-mass">
+                <h3 id="h3-mass">Mass (Kilo / Pound)</h3>
+                <p class="light-p" id="result-mass"></p>
             </div>
         </section>
     </div>
+    <footer class="footer mt-auto py-3">
+        <div class="d-flex flex-row-reverse">
+            <span class="text-muted">&copy; 2022 [HcDevLabs]</span>
+        </div>
+    </footer>
 
+    <!-- MAIN JS FILE -->
     <script src="js/converter.js"></script>
+    <!-- BOOTSTRAP 4.6 JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
 </html>

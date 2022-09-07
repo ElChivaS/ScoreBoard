@@ -3,12 +3,33 @@ body {
     margin: 0;
     padding: 0;
 }
+.logo-light {
+    font-weight: 800;
+    text-shadow: 1px 1px #ff0000;
+}
+.logo-dark {
+    /* font-weight: 800; */
+    text-shadow: 1px 1px #fff;
+}
+/* .theNav {
+    display: flex;
+    /* justify-content: space-around; 
+}*/
+ul.nav {
+    background-color: #CCC;
+}
+img {
+    text-align: center;
+    align-content: flex-end;
+} */
 .container {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 585px;
+    /* width: 550px; */
+    height: 285px;
     box-sizing: border-box;
 }
 header {
@@ -16,8 +37,9 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-bottom: 37px;
+    /* margin-bottom: 37px; */
     /* width: 585px; */
 }
 h1 {
@@ -27,8 +49,16 @@ h1 {
     line-height: 3em;
     margin-top: 33px;
 }
+h3 {
+    color: #5A537B; /* Dark Theme: #CCC1FF */
+}
 section {
     background-color: #F4F4F4; /* Dark Theme: #1F2937 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 36px;
+    /* margin-top: 0; */
 }
 label {
     color: #FFF;
@@ -44,7 +74,9 @@ label {
     padding: 9px 23px;
     font-weight: 600;
     border-radius: 5px;
+    margin-top: 27px;
     margin-bottom: 34PX;
+    background-color: #FFF;
 }
 input {
     margin: 0 auto;
@@ -64,12 +96,31 @@ input {
   }
 .item-card {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    width: 500px;
+    width: 550px;
     flex-direction: column;
     padding:  31px 77px 20px 102px;
     margin-bottom: 27px;
     border-radius: 5px;
     background-color: #fff; /* Dark Theme: #273549 */
 }
+p {
+    width: 100%!important;
+    font-size: .9em;
+}
+.mt-7 {
+    margin-top: 7rem;
+}
+.nav-link:hover {
+    filter: brightness(.5);
+}
+.navbar-toggler {
+    border-color: none;
+}
+
+/* DARK THEME */
+section.dark-bg { background-color: #1F2937 }
+.item-card-dark { background-color: #273549 }
+h3.dark-txt { color: #CCC1FF }
+p.dark-p { color: #FFF }

@@ -1,28 +1,46 @@
-// Render the updated myEmojis array in the mini-browser.
-
-// One solution: wrap the code for rendering the emojis in a function and make sure it
-// clears away old version of the array before it renders the updated one
-
+// Make the pop and shift buttons work as well
 const myEmojis = ["👨‍💻", "⛷", "🍲"]
 const emojiContainer = document.getElementById("emoji-container")
+const emojiInput = document.getElementById("emoji-input")
+const pushBtn = document.getElementById("push-btn")
+const unshiftBtn = document.getElementById("unshift-btn")
+const popBtn = document.getElementById("pop-btn")
+const shiftBtn = document.getElementById("shift-btn")
 
-function renderEmojis(arr) {
-    for (let i = 0; i < arr.length; i++) {
+function renderEmojis() {
+    emojiContainer.innerHTML = ""
+    for (let i = 0; i < myEmojis.length; i++) {
         const emoji = document.createElement('span')
-        emoji.textContent = arr[i]
+        emoji.textContent = myEmojis[i]
         emojiContainer.append(emoji)
     }
 }
 
-renderEmojis(myEmojis)
+renderEmojis()
 
-const pushBtn = document.getElementById("push-btn")
 pushBtn.addEventListener("click", function(){
-    const emojiInput = document.getElementById("emoji-input")
     if (emojiInput.value) {
         myEmojis.push(emojiInput.value)
         emojiInput.value = ""
-        emojiContainer.innerHTML = ""
-        renderEmojis(myEmojis.slice(-3))
+        renderEmojis()
     }
 })
+
+unshiftBtn.addEventListener("click", function(){
+    if (emojiInput.value) {
+        myEmojis.unshift(emojiInput.value)
+        emojiInput.value = ""
+        renderEmojis()
+    }
+})
+
+popBtn.addEventListener("click", function() {
+    myEmojis.pop()
+    renderEmojis()
+})
+
+shiftBtn.addEventListener("click", function() {
+    myEmojis.shift()
+    renderEmojis()
+})
+

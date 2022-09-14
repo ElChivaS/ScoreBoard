@@ -1,3 +1,4 @@
+/* GOT RID OF OBJECTS 'hero' AND 'monster' AND CREATED CharacterData (I)
 const hero = {
     elementID: "hero",
     name: "Wizard", 
@@ -14,6 +15,22 @@ const monster = {
     health: "10",
     // diceRoll: [2],
     diceCount: 1
+}*/
+const characterData = {
+    hero: {
+        elementID: "hero",
+        name: "Wizard", 
+        avatar: "wizard.png",
+        health: "60",
+        diceCount: 3
+    },    
+    monster: {
+        elementID: "monster",
+        name: "Orc", 
+        avatar: "orc.png",
+        health: "10",
+        diceCount: 1
+    }
 }
 
 function getDiceRollArray(diceCount) {
@@ -66,11 +83,13 @@ function Character(data) {
 }
 
 // CREATE CHARACTERS AS INSTANCES OF THE CLASS 'Character'
-const wizard = new Character(hero)
+// const wizard = new Character(hero) // (I) 
+const wizard = new Character(characterData.hero) // (I) CALL MUST BE THIS WAY AFTER CREATE THE CLASS 'CharacterData'
 // wizard.getCharacterHtml()
 //document.getElementById(wizard.elementID).innerHTML = wizard.getCharacterHtml() // INTO A FUNCTION render()
 
-const orc = new Character(monster)
+// const orc = new Character(monster) // (I)
+const orc = new Character(characterData.monster) // (I) CALL MUST BE THIS WAY  AFTER CREATE THE CLASS 'CharacterData'
 // orc.getCharacterHtml()
 //document.getElementById(orc.elementID).innerHTML = orc.getCharacterHtml() // INTO A FUNCTION render()
 

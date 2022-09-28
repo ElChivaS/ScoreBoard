@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 :root {
-    --dark-bg: #000;
-    --light-text: #fff;
+    --dark-bg: #282C35;
+    --light-bg: #FFFAFA;
+    --light-text: #FFFAFA;
     --highlight: #FFD60A
 }
 html,
@@ -97,6 +98,8 @@ button {
 .dark {
     background-color: var(--dark-bg);
     color: var(--light-text);
+    animation: switchToDark .4s linear;
+    animation-fill-mode: forwards;
 }
 .dark .theme-toggle {
     border-color: var(--light-text);
@@ -104,15 +107,23 @@ button {
 }
 
 .dark .theme-toggle:after {
-    content: '';
+    content: '☀️';
     left: 0;
     background-color: var(--light-text);
     transition-duration: .4s;
 }
-.theme-toggle:before {
-    content: '☀️';
+.dark .theme-toggle:before {
+    content: '';
 }
-.theme-toggle .dark:after {
+.theme-toggle:after {
     content: '👻';
 }
 /* MEDIA QUERIES */
+@keyframes switchToDark {
+    0% {
+        background-color: var(--light-text);
+    }
+    100% {
+        transform: translateY(-3px);
+    }
+}
